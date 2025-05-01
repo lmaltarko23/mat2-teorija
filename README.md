@@ -181,9 +181,7 @@ $$x \in D_f \Rightarrow -x \in D_f, \; f(-x) = f(x), \; \forall x \in D_f$$
 	- za $a \in [0, \,1]$ funkcija strogo pada na čitavoj domeni
 	
 #### Svojstva logaritama: 
-	$$
-	\begin{gather}
-
+	$$\begin{gather}
 	\log_a(b) = c\Leftrightarrow a^c = b \\\\
 	a^{\log_a(x)} = x \\\\
 	\log_a(a^x) = x  \\\\
