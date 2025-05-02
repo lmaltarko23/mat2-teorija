@@ -3,7 +3,7 @@
 - **Definicija funkcije**: Funkcija je preslikavanje tipa $f: \: A  \to B$, pri čemu su $A$ i $B$ neprazni skupovi, a $a \in A$ i $b \in B$. Funkcija je specijalni oblik relacije koji elementu skupa $A$  pridružuje točno jedan element skupa $B$. Funkciju se označava kao $f(a) = b$. Skup $A$ se naziva domenom funkcije, a $B$ slikom odnosno kodomenom funkcije.
 
 - **Zadavanje funkcije:** 
-	1) Numerički (tablično)
+	1) Numerički (tabularno)
 	2) Algebarski (formulom)
 	3) grafički (grafom)
 
@@ -39,43 +39,71 @@
 
 ## Pravila za računanje domena funkcija 
 1) **racionalna funkcija**
-	$f(x) = \frac {P(x)} {Q(x)}:\qquad Q(x) \neq 0$
+	$$f(x) = \frac {P(x)} {Q(x)}:\quad Q(x) \neq 0$$
 2) **parni korijen**
-	$f(x) = \sqrt[2k]{g(x)}: \qquad g(x) \geq 0$
+	$$f(x) = \sqrt[2k]{g(x)}: \quad g(x) \geq 0$$
 3) **logaritamska funkcija:** 
-	$f(x) = \log_a{g(x)}: \qquad g(x) > 0$
+	$$f(x) = \log_a{g(x)}: \quad g(x) > 0$$
 4) **ciklometrijske funkcije $\arcsin$ i $\arccos:$**
-	$f(x) = \arcsin(g(x)): \qquad -1 \leq g(x) \leq 1$
-	$f(x) = \arccos(g(x)): \qquad -1 \leq g(x) \leq 1$
+	$$
+	\begin{gather}
+	f(x) = \arcsin(g(x)): \quad -1 \leq g(x) \leq 1 \\\\
+	f(x) = \arccos(g(x)): \quad -1 \leq g(x) \leq 1
+	\end{gather}
+	$$
 
 - **Kompozicija funkcija ($f \circ x$):** 
  $$
-g: \; A \to B \\
-f: \; B \to C \\
-f \cdot g : \; A \to C \\
-g \circ f)(x) = g \Big(f(x) \Big)
+ \begin{align}
+g: &\; A \to B \\
+f: &\; B \to C \\
+f \circ g : &\; A \to C \\
+\big(g \circ f \big) & (x) = g \big(f(x) \big)
+\end{align}
 $$
 
 - **Identiteta:** 
-$\id_A: \; A \to A, \quad \id_A(x) = x \\id_A \circ f = f$
- $\id_A \circ f = f$
+$$\DeclareMathOperator{\id}{id}
+\begin{gather}
+\id_A: \; A \to A, \quad \id_A(x) = x \\
+\id_A \circ f = f \\
+\id_A \circ f = f
+\end{gather}$$
 
 	
 -  **Uvjet komponiranja**: 
 	- Za kompoziciju $f \circ g$, $Im_f \subseteq D_g$ ; 
-	- U kompoziciji prvo djeluje *unutarnja* funkcija, a tek onda *vanjska* ($(f\circ g)(x) = f(g(x))$).
+	- prvo djeluje *unutarnja* funkcija, onda *vanjska* 
+	$$(f\circ g)(x) = f\big(g(x)\big)$$
 
 - **Što nam govori pravilo funkcije?:** Kako funkcija varijabli $x$ pridružuje pripadajući $y$.
 
-- **Inverzna funkcija:** 
+## **Inverzna funkcija:** 
 
 - **Dobivanje inverzne funkcije:** Umjesto $y = (\cdot\cdot\cdot)$ dobiti $x = (\cdot\cdot\cdot)$
 
 - **Definicija inverzne funkcije:** Inverzna funkcija funkcije $f: \; D \to K$ je funkcija $f^{-1}: \; K \to D$ za koju vrijedi $f \circ f^{-1} = \id_K, \quad f^{-1} \circ f = \id_D$
 
-- **Injektivnost:** svojstvo funkcije da ne postoje dva elementa u domeni koji imaju istu sliku u kodomeni $(\forall x_1, \: x_2 \in D, \; f(x_1) = f(x_2) \Rightarrow x_1 = x_2 \equiv \forall x_1 \: x_2 \in D, \; x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2))$
+- **Injektivnost:** svojstvo funkcije da ne postoje dva elementa u domeni koji imaju istu sliku u kodomeni 
+$$
+\begin{align}
+\forall x_1, \: x_2 \in D, \; f(x_1)  = f(x_2) &\Rightarrow x_1 = x_2 \\
+&\equiv \\
+\forall x_1 \: x_2 \in D, \; x_1 \neq x_2 &\Rightarrow f(x_1) \neq f(x_2))
+\end{align}
+$$
 
-- **Surjektivnost:** svojstvo funkcije da domenu preslikava u čitavo područje kodomene (nema "rupa" u kodomeni, svi elementi su "pogođeni"): $\forall y \in K, \; \exists n \in D, \; f(x) = y$
+$$\textsf{(malo izmijenjen raspored)}
+$$
+$$\begin{gather}
+\forall x_1, \: x_2 & &\in& D, \; &f(x_1)  = f(x_2)& &\Rightarrow &x_1 = x_2 \\
+&&&&\equiv \\
+\forall x_1 \: x_2 & &\in& D, \; & x_1 \neq x_2& &\Rightarrow &f(x_1) \neq f(x_2))
+\end{gather}
+$$
+
+- **Surjektivnost:** svojstvo funkcije da domenu preslikava u čitavo područje kodomene (nema "rupa" u kodomeni, svi elementi su "pogođeni"): 
+$$\forall y \in K, \; \exists n \in D, \; f(x) = y$$
 
 - **Bijektivnost:** i surjektivnost i injektivnost
 
@@ -109,34 +137,35 @@ $\id_A: \; A \to A, \quad \id_A(x) = x \\id_A \circ f = f$
 
 - **Nultočka:** svaki $x$ za koji je $f(x) = 0$. Označava se s $x_0$.
 
-- **Omeđenost odozgo:**  $\exists M \in \mathbb{R}, \; f(x) \leq M, \; \forall x \in D_f \qquad$ (u prijevodu, postoji vrijednost $M$ (iz skupa $\mathbb{R}$, ali to je manje bitno), pri čemu je $f(x)$ manji ili jednak tom $M$ za svaki x u domeni. $M$ se naziva gornjom međom funkcije.
+- **Omeđenost odozgo:**  $\exists M \in \mathbb{R}, \; f(x) \leq M, \; \forall x \in D_f \;$ (u prijevodu, postoji vrijednost $M$ (iz skupa $\mathbb{R}$, ali to je manje bitno), pri čemu je $f(x)$ manji ili jednak tom $M$ za svaki x u domeni. $M$ se naziva gornjom međom funkcije.
 
 - **Najmanja gornja međa:** Najmanja vrijednost za koju vrijedi da je gornja međa $(\forall M \in \mathbb{R}, \; f(x) \leq M, \; \forall x \in D_f, )$ ` dalje ne znam
 
-- **Omeđenost odozgo:** $\exists m \in \mathbb{R}, \; f(x) \geq m, \; \forall x \in D_f$
+- **Omeđenost odozgo:** 
+- $$\exists m \in \mathbb{R}, \; f(x) \geq m, \; \forall x \in D_f$$
 
 - Najveća donja međa: najveća vrijednost za koju vrijedi da je donja međa funkcije $(dodati)$
 
-- **Omeđena funkcija:** Funkcija koje je omeđena i odozdo i odozgo $\exists M \in \mathbb{R},  \; f(x) \leq M, \; \forall x \in D_f \wedge \exists m, \; f(x) \geq m, \; \forall x \in D_f$
-- **Rastuća funkcija:** Funkcija raste na intervalu $I (\subseteq D_f)$  ako: $( \forall x_1, \: x_2 \in I ) \big(x_1 \leq x_2 \Rightarrow f(x_1) > f(x_2)\big)$
+- **Omeđena funkcija:** Funkcija koje je omeđena i odozdo i odozgo $$\exists M \in \mathbb{R},  \; f(x) \leq M, \; \forall x \in D_f \wedge \exists m, \; f(x) \geq m, \; \forall x \in D_f$$
+- **Rastuća funkcija:** Rast na intervalu $I (\subseteq D_f)$ : $$( \forall x_1, \: x_2 \in I ) \big(x_1 \leq x_2 \Rightarrow f(x_1) > f(x_2)\big)$$
 
-- **Strogo rastuća funkcija:** Funkcija strogo raste na intervalu $I (\subseteq D_f)$ ako: $(\forall x_1, \: x_2 \in I)\big(x1 < x_2 \Rightarrow f(x_1) < f(x_2)\big)$
+- **Strogo rastuća funkcija:** Rast na intervalu $I (\subseteq D_f)$: $$(\forall x_1, \: x_2 \in I)\big(x1 < x_2 \Rightarrow f(x_1) < f(x_2)\big)$$
 
-- **Padajuća funkcija:** Funkcija pada na intervalu $I(\subseteq D_f)$ ako: $(\forall x_1, x_2 \in I)\big( x_1 < x_2 \Rightarrow f(x_2) < f(x_1) \big)$
+- **Padajuća funkcija:** Pad na intervalu $I(\subseteq D_f)$ : $$(\forall x_1, x_2 \in I)\big( x_1 < x_2 \Rightarrow f(x_2) < f(x_1) \big)$$
 
-- **Strogo padajuća funkcija:** Funkcija strogo pada na intervalu $I(\subseteq D_f)$ ako: $(\forall x_1, \: x_2) \big( x_1 < x_2 \Rightarrow f(x_2) < f(x_1)\big)$
+- **Strogo padajuća funkcija:** Funkcija strogo pada na intervalu $I(\subseteq D_f)$ ako: $$(\forall x_1, \: x_2) \big( x_1 < x_2 \Rightarrow f(x_2) < f(x_1)\big)$$
 
 - **Monotona funkcija:** Funkcija koja raste ili pada na cijelom području svoje domene
 
 - **$\varepsilon$-okolina:** interval $\langle x_0 - \varepsilon, \; x_o - \varepsilon \rangle$ (je li krivo ako kažem samo $\langle x-\varepsilon, \, x+\varepsilon \rangle$?)
 
-- **Lokalni maksimum:** Točka $x_M$ unutar okoline $O$ unutar koje vrijdi da je $x_M$ najveća vrijdnost koju funkcija unutar te okoline poprima $\big( f(x) \leq f(x_m), \forall x \in O \big)$
+- **Lokalni maksimum:** Točka $x_M$ unutar okoline $O$ unutar koje vrijdi da je $x_M$ najveća vrijdnost koju funkcija unutar te okoline poprima $$ f(x) \leq f(x_m), \, \forall x \in O $$
 
-- **Strogi lokalni maksimum:** Točka $x_M$ za koju vrijdi da je jedina vrijednost unutar okoline $O$ u kojoj funkcija poprima maksimalnu vrijednost $\big( f(x) < f(x_M), \; \forall x \in O \setminus \{x_m\} \big)$
+- **Strogi lokalni maksimum:** Točka $x_M$ za koju vrijdi da je jedina vrijednost unutar okoline $O$ u kojoj funkcija poprima maksimalnu vrijednost $$ f(x) < f(x_M), \; \forall x \,\in\, O \setminus \{x_m\}$$
 
-- **Lokalni minimum:** Točka $x_m$ unutar okoline $O$ za koju vrijdi da je $x_m$ najmanja vrijednost koju funkcija proprima unutar okoline $O$. $f(x) \geq f(x_m), \; \forall x \in O$
+- **Lokalni minimum:** Točka $x_m$ unutar okoline $O$ za koju vrijdi da je $x_m$ najmanja vrijednost koju funkcija proprima unutar okoline $O$ $$f(x) \geq f(x_m), \; \forall x \in O$$
 
-- **Strogi lokalni minimum:** Točka $točka $x_m$ unutar okoline $O$ za koju vrijedi da je $x_m$ najmanja vrijdnost koju funkcija poprima unutar okoline $O$. $\big( f(x) > x_m, \; \forall x \in O \setminus x_m \big)$
+- **Strogi lokalni minimum:** Točka $točka $x_m$ unutar okoline $O$ za koju vrijedi da je $x_m$ najmanja vrijdnost koju funkcija poprima unutar okoline $O$. $$f(x) > x_m, \; \forall x \, \in \, O \setminus x_m $$
 
 - **Lokalni ekstremi:** i minimumi i maksimumi
 
@@ -146,7 +175,7 @@ $$\exists T \in \mathbb{R} \setminus \{ 0\}, \; f(x+T) = f(x), \; \forall x \in 
 - **Parnost:** svojstvo funkcije da "briše" minus. Graf parne funkcije osnosimetričan s obzirom na os $y$. 
 $$x \in D_f \Rightarrow -x \in D_f, \; f(-x) = f(x), \; \forall x \in D_f$$
 
-- **Neparnost:** svojstvo funkcije da "izlučuje" minus. Graf neparne funkcije je centralnosimetričan s obzirom na ishodište. Formalno: $x \in D_f \Rightarrow -x \in D_f, \; f(-x) = -f(x), \; \forall x \in D_f$
+- **Neparnost:** svojstvo funkcije da "izlučuje" minus. Graf neparne funkcije je centralnosimetričan s obzirom na ishodište. $$x \in D_f \Rightarrow -x \in D_f, \; f(-x) = -f(x), \; \forall x \in D_f$$
 
 - **Parne i neparne elementarne funkcije:
 	- **Parne:** $x^{2k}, \; \cos(x),\; |x|$
@@ -260,33 +289,46 @@ S_n & = \frac {n \cdot (2 a_1 + (n-1) \cdot d)} {2}
 $$
 
 - **Geometrijski niz:** niz kod kojeg je kvocijent ($q$) među članovima jednak 
-$$\forall n \in \mathbb{N}, \frac {a_{n+1}} {a_n} = q$$
+$$\forall n \in \mathbb{N}, \;\frac {a_{n+1}} {a_n} = q$$
 
 - **Opći član geometrijskog niza**
 $$a_n = a_{n-1} \cdot q = a_1 \cdot q^{n-1}$$
 
 - **Suma prvih n članova geometrijskog niza**
-$$S_n = \frac {a_1 \cdot q^n -1} {q-1}$$
+$$S_n = \frac {a_1 \cdot q^n -1} {q-1}$$ ==! zašto je ovdje $q^n-1$, a ne q^{n-1}?==
 
 ## Svojstva nizeva
-- **Rast:** $a_n \leq a_{n+1} , \quad \forall n \in \mathbb{N}$
-- **Strogi rast:** $a_n < a_{n+1},  \quad \forall n \in \mathbb{N}$
-- **Pad:** $a_n \geq a_{n+1}, \quad \forall n \in \mathbb{N}$
-- **Strogi pad:** $a_n > a_{n+1}, \quad \forall n \in \mathbb{N}$
+$$
+\begin{align*}
+\textsf{ Strogi rast: } a_n < a_{n+1} \Leftrightarrow &\, a_{n+1} > a_n\\
+\textsf{ Rast: } a_n \leq a_{n+1} \Leftrightarrow & \,a_{n+1} \geq a_n\\
+\textsf{ Strogi pad: } a_n > a_{n+1} \Leftrightarrow & \, a_{n+1} < a_n\\
+\textsf{ Pad: } a_n \geq a_{n+1} \Leftrightarrow & \, a_{n+1} \leq a_n\\\\
+& \forall n \in \mathbb{N}
+\end{align*}
+$$
 
 - **Aritmetički niz:**
-	- $d>0 \Rightarrow$ strog rast
-	- $d < 0 \Rightarrow$ strog pad
-- **Geometrijski niz:**
-	- $a_1 > 0, \, q > 1 \Rightarrow$ strog rast
-	- $a_1 > 0, \, q \in [-1, \, 1] \Rightarrow$ strog pad
-	- $a_1 < 0, \, q > 1 \Rightarrow$ strog pad
-	- - $a_1 < 0, \, q \in [-1, \, 1] \Rightarrow$ strog pad
-	- $q < 0 \Rightarrow$ niz nije monoton
+$$
+\begin{align}
+d>0 \Rightarrow \textsf{ strog rast } \\
+d < 0 \Rightarrow \textsf{ strog pad } \\
+\end{align}
+$$
+- **Geometrijski niz:
+ $$
+a_1 \cdot q^n\begin{cases}
+&a_1 > 0, \, &q > 1 &  \Rightarrow \textsf{ strog rast } \\
+&a_1 > 0, \, &q \in [-1, \, 1] &  \Rightarrow \textsf{ strog pad } \\
+&a_1 < 0, \, &q > 1 &   \Rightarrow \textsf{ strog pad } \\
+&a_1 < 0, \, &q \in [-1, \, 1] &  \Rightarrow \textsf{ strog pad } \\
+&&q < 0 &  \Rightarrow \textsf{ niz nije monoton }
+\end{cases}
+$$
 
 ## Gomilište i limes niza
 - **Tri vrste nizovi s obzirom na gomilište**
-	- nizovi koji teže nekoj vrijednosti
+	- nizovi koji teže nekoj vrijednosti $L \in \mathbb{R}$
 	- nizovi koji teže u $\pm \infty$
 	- nizovi koji nisu monotoni niti ne teže u neku vrijednost
 
@@ -330,7 +372,14 @@ $$\textsf{niz monoton i momeđen} \Rightarrow \textsf{limes}$$
 
 - **Izvorna definicija broja $e$:** $e = \lim_{n \to \infty} \Big( 1 + \frac {1} {n}\Big)^n$
 
-- **Limes eksponencijalne funkcije (slučajevi):** $f(x)=\begin{cases}\infty,& q>1\\[5pt] 1,& q = 1\\[5pt] 0,& q \in \langle -1, \, 1\rangle\\[5pt]\text{ne postoji},& q \leq -1\end{cases}$
+- **Limes eksponencijalne funkcije (slučajevi):** 
+- $$
+f(x)=
+\begin{cases}
+\infty,& q>1\\[5pt] 1,& q = 1 \\
+ 0, & q \in \langle -1, \, 1\rangle \\
+\text{ne postoji},& q \leq -1
+\end{cases}$$
 
 - **TEOREM 3:** Pravila računanja limesa
 $$
@@ -386,102 +435,233 @@ $$f(x) \to L \textsf{ kada } x \to c \textsf{ "na bilo koji način" } \Rightarro
 L = \lim_{x \to c} f(x)$$
 
 - **HEINEOVA DEFINICIJA LIMESA FUNKCIJE:** $L \in \mathbb{R}$ je limes funkcije $f$ u točki $f(x) = c$ ako za svaki niz $a_n$ takav da je $\lim_{n \to \infty} (a_n) = c$, tada $\lim_{n \to \infty} \big( f(a_n) \big) = L$
-$$\forall a_n, \,\lim_{n \to \infty} (a_n) = c \Rightarrow  $$
+$$\forall a_n, \,\lim_{n \to \infty} (a_n) = c \Rightarrow \lim_{n \to \infty} f(a_n)$$
 
-- **HEINEOVA DEFINICIJA LIMESA FUNKCIJE SLIJEVA:** $L \in \mathbb{R}$ je limes funkcije $f$ u točki $x = c$ ako za svaki niz (a_n) za koji je $a_n < c, \, \forall n \wedge \lim_{n \to \infty} (a_n) = c$, tada $lim_{n \to \infty} f(a_n) = L$ `|| pitanje: ako je ovdje riječ o limesu slijeva, zažto nije lim_{n \to \infty^+} ? Mislim, nema smisla izraz \infty^+, ali mi niti nema smisla da limes slijeva/zdesna postoji ako nema onog plusića/minusića u eksponentu, pogotovo jer se kod limesa zdesna ne javlja -\infty, npr.`
+- **HEINEOVA DEFINICIJA LIMESA FUNKCIJE SLIJEVA:** $L \in \mathbb{R}$ je limes funkcije $f$ u točki $x = c$ ako za svaki niz (a_n) za koji je 
+$$a_n < c, \, \forall n \wedge \lim_{n \to \infty} (a_n) = c \Rightarrow \lim_{n \to \infty} f(a_n) = L$$
 
-- **HEINEOVA DEFINICIJA LIMESA FUNKCIJE ZDESNA:** $L \in \mathbb{R}$ je limes zdesna funkcije $f$ u točki $x = c$ ako za svaki niz $(a_n)$ za koji vrijedi $a_n > c, \, \forall n \, \wedge \, \lim_{n \to \infty} (a_n) = c$, tada $\lim_{n \to \infty} f(a_n) = L$
+- **HEINEOVA DEFINICIJA LIMESA FUNKCIJE ZDESNA:** $L \in \mathbb{R}$ je limes zdesna funkcije $f$ u točki $x = c$ ako za svaki niz $(a_n)$ za koji vrijedi $$a_n > c, \, \forall n \, \wedge \, \lim_{n \to \infty} (a_n) = c \Rightarrow \lim_{n \to \infty} f(a_n) = L$$
 
-- **CAUCHYJEVA DEFINICIJA LIMESA FUNKCIJE:** $L \in \mathbb{R}$ je limes funkcije $f$ u točki $x = c$ ako $\forall \varepsilon > 0 \exists \delta > 0$ *"tako da vrijedi"* $0 < |x-c| < \delta \Rightarrow |f(x) - L| < \varepsilon$
+- **CAUCHYJEVA DEFINICIJA LIMESA FUNKCIJE:** $L \in \mathbb{R}$ je limes funkcije $f$ u točki $x = c$ ako $\forall \varepsilon > 0 \exists \delta > 0$ "tako da vrijedi" (==veznik "i"?, što znači "," u hijeroglifima (i kako se hijeroglifi zovu)? ==) $0 < |x-c| < \delta \Rightarrow |f(x) - L| < \varepsilon$
+$$\forall \varepsilon > 0, \, \exists \delta > 0, \; |x-c| \in \langle 0, \, \delta \rangle \Rightarrow |f(x) - L |< \varepsilon$$
 
-- **NUŽAN I DOVOLJAN UVJET ZA POSTOJANJE LIMESA FUNKCIJE:** $\lim_{x \to c} f(x) = L \Leftrightarrow \lim_{x \to c^-} (f(x)) = \lim_{x \to c^+} (f(x)) = L$
 
-- **TEOREM O SENDVIČU:** Ako postoji pozitivni broj $p$ za koji vrijedi $f(x) \leq g(x) \leq h(x), \;$  $\forall x \in \mathbb{R}, \; 0 < |x-c| < p$ i ako je $\lim_{x \to c} (f(x)) = \lim_{x \to c} (h(x)) = L$, tada je i $\lim_{x \to c} (g(x) = L$
+- **NUŽAN I DOVOLJAN UVJET ZA POSTOJANJE LIMESA FUNKCIJE:** limes slijeva i zdesna moraju biti isti $$\lim_{x \to c} f(x) = L \;\; \Leftrightarrow \;\; \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L$$
 
-- **Važniji limesi 2:** 
-	-  $\lim_{x \to \infty} \big( \frac {1} {x}\big) = 0$
-	- $\lim_{x \to \infty} (q^x) = 0$
-	- $\lim_{x \to \infty} (1 + \frac {1}{x})^x = e$
-	- $\lim_{x \to 0} (1+x)^{\frac {1} {x}} = e$
-	- $\lim_{x \to 0} \Big(\frac {\ln(x+1)} {x}\Big) = 1$
-	- $\lim_{x \to 0} \Big( \frac {a^x -1} {x} \Big) = \ln (a)$
-	- $\lim_{x \to 0} \Big( \frac {sin(x)} {x} \Big) = 1$
+- **TEOREM O SENDVIČU: ==! objasniti na primjeru... ==** Ako postoji pozitivni broj $p$ za koji vrijedi $f(x) \leq g(x) \leq h(x), \;$  $\forall x \in \mathbb{R}, \; 0 < |x-c| < p$ i ako je $\lim_{x \to c} f(x) = \lim_{x \to c} h(x) = L$, tada je i $\lim_{x \to c} g(x) = L$ ==! posebno provjeriti, ovo sam sam prebacivao u hijeroglife==
+$$
+\begin{gather}
+\exists p > 0, \, f(x) \leq g(x) \leq h(x), \, \\
+\forall x \in \mathbb R, \, |x-c| < p, \, \\
+\lim_{x \to c} f(x) = \lim_{x \to c} h(x) = L \; \Rightarrow \; \lim{x \to c} g(x) = L
+\end{gather}$$
 
-- **Neodređeni izrazi (7):** $\frac {0}{0}, \; \frac {\infty} {\infty}, \; 0 \cdot \infty, \; \infty - \infty, \; 1^{\infty}, \; \infty^0, \; 0^0$
+- **Važniji limesi funkcije:** 
+$$
+\begin{gathered}
+_{x \to 0} & _{x \to \infty} \\
+\lim_{x \to 0} (1+x)^{\frac {1} {x}} = e &
+\lim_{x \to \infty} \Big( \frac {1} {x}\Big) = 0 \\\\
+\lim_{x \to 0} (1+x)^{\frac {1} {x}} = e &
+\lim_{x \to \infty} (q^x) = 0 \\\\
+\lim_{x \to 0} \Big( \frac {a^x -1} {x} \Big) = \ln (a) &
+\lim_{x \to \infty} \Big(1 + \frac {1}{x}\Big)^x = e \\\\
+\lim_{x \to 0} \Big( \frac {\sin(x)} {x} \Big) = 1 &
+\end{gathered}
+$$
+
+- **Sedam neodređenih izraza:** 
+$$\frac {0}{0}, \; \frac {\infty} {\infty}, \; 0 \cdot \infty, \; \infty - \infty, \; 1^{\infty}, \; \infty^0, \; 0^0$$
 
 ### Neprekidnost
 
-- **Definicija neprekidne funkcije u točki:** Funkcija $f$ je neprekinna u točki $c \in D_f$ ako $\lim_{x \to c} (f(x)) = f(c)$
+- **Definicija neprekidne funkcije u točki:** Funkcija $f$ je neprekidna u točki $c \in D_f$ ako 
+$$\lim_{x \to c} f(x) = f(c)$$
 
-- **Limes funkcije u točki:** $L$ je limes funkcije $f$ u točki $x = c$ ako $\forall \varepsilon > 0, \, \exists \delta > o, \, 0 < |x-c| < \delta < \Rightarrow |f(x) -L| < \varepsilon$
+- **Limes funkcije u točki:** $L$ je limes funkcije $f$ u točki $x = c$ ako $$\forall \varepsilon > 0, \; \exists \delta > 0, \; |x-c| \in \langle 0, \delta \rangle \;\; \Rightarrow \;\;|f(x) -L| < \varepsilon$$ ==!`zašto ovdje stoji` $0 <|x-c| < \delta$, `ali ne i` $0 < |f(x) - L| < \varepsilon$ ==
 
-- **Neprekidnost funkcije u točki:** Funkcija $f$ je neprekidna u točki $x = c$ ako $\forall \varepsilon > 0, \, \exists \delta > 0, \, |x-c| < \delta \Rightarrow |f(x) - f(c)| < \varepsilon$
+- **Neprekidnost funkcije u točki:** Funkcija $f$ je neprekidna u točki $x = c$ ako $$\forall \varepsilon > 0, \; \exists \delta > 0, \; |x-c| < \delta \;\; \Rightarrow \;\; |f(x) - f(c)| < \varepsilon$$
+==! koja je razlika u ove dvije točke (jedno je limes, a drugo nije), ali *zašto*?
 
 - **Neprekidnost funkcije u točki 2:** Funkcija $f$ je neprekidna u točki $x = c$ akko vrijedi $\lim_{\Delta x \ to 0} \big( \Delta f(c) \big) = 0$
+$$f \textsf{ neprekidna u } x = c \;\; \Leftrightarrow \;\; \lim_{x \to 0} \Delta f(c) = 0$$
 
-- **Neprekidnost funkcije na intervalu:** Funkcija je neprekidna na intercalu ako je neprekidna u svakoj točki tog intervala
+- **Neprekidnost funkcije na intervalu:** Funkcija je neprekidna na intervalu ako je neprekidna u svakoj točki tog intervala ==! fale hijeroglifi!==
 
-- **Prekid u točki:** Funkcija $f$ ima prekid prve vrste u točki $x = c$ ako u noj postoje konačni limesi $L_1 = \lim_{x \to c^-} \big( f(x) \big), \quad L_2 = \lim_{x \to c^+} \big( f(x) \big)$. Ako su $L_1 = L_2 = f(x)$, funkcija nema prekid u točki $x = c$. Ako su $L_1 = L_2 \neq f(x)$, funkcija ima uklonjiv prekid u točki $x = c$. Ako su $L_1 \neq L_2$, funkcija ima neuklonjiv prekid orve vrste u točki $x = c$.
+#### Klasifikacija prekida
+
+$$
+
+\begin{align}
+&\textsf{Klasifikacija prekida u točki } f(x) = c \\
+_\textsf{nema prekida: } & \quad f(c) = \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) \\\\
+_\textsf{prekid prve vrste: } & \quad  \\
+_\textsf{uklonjiv: } & \quad f(c) \neq  \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) \\
+_\textsf{neuklonjiv: } & \quad f(c) \neq  \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x) \\\\
+_\textsf{prekid druge vrste: } &\quad c \textsf{ "nije izolirana funkcija iz domene i barem jedan}  \\ 
+& \quad \textsf{od limesa ne postoji (dakle on je } \pm \infty \textsf{)"}
+\end{align}
+$$
+
+- **Prekid u točki:** Funkcija $f$ ima prekid prve vrste u točki $x = c$ ako u njoj postoje konačni limesi $L_1 = \lim_{x \to c^-} \big( f(x) \big), \quad L_2 = \lim_{x \to c^+} \big( f(x) \big)$. Ako su $L_1 = L_2 = f(x)$, funkcija nema prekid u točki $x = c$. Ako su $L_1 = L_2 \neq f(x)$, funkcija ima uklonjiv prekid u točki $x = c$. Ako su $L_1 \neq L_2$, funkcija ima neuklonjiv prekid orve vrste u točki $x = c$.
 
 - **Prekid druge vrste:** Ako $c$ nije izolirana funkcija iz domene funkcije $f$, funkcija $f$ ima prekid druge vrste u točki $x = c$ ako barem jedan od limesa $\lim_{x \to c^-} \big( f(x) \big), \quad \lim_{x \to c^+} \big( f(x) \big)$ ne postoji.
 
 ### Asimptote
 
-- Asimptota je pravac $y = kx+l$ ako točka $T$ funkcije po jednoj koordinati teži u $\pm \infty$, a po drugoj teži k pravcu $y = kx+l$
+- Asimptota je pravac $y = kx+l$ ako točka $T$ funkcije po jednoj koordinati teži u $\pm \infty$, a po drugoj teži k pravcu $y = kx+l$ ==! ne razumijem kompletno==
 
+$$
+\begin{align}
+	_\textsf{V.A. } \\ 
+	& x = c: \lim_{x \to c^\pm} f(x) =  \pm \infty \\\\
+	_\textsf{H.A. } \\ 
+	& y = l:  \lim_{x \to \pm \infty} f(x) =  l  \\\\
+	_\textsf{K.A. } \\ 
+	& y= kx+l \; 
+	\begin{cases}
+		k = \lim_{x \to \infty} \frac{f(x)}{x} \\
+		l = \lim_{x \to  \infty} \Big( f(x) - kx \Big)
+	\end{cases}
+\end{align}
+$$
+Originali (provjeriti i skratiti u $\uparrow\;$)
 - **VA:** $x = c$ je vertikalna asimptota funkcije $f$ ako $\lim_{x \to c^-} \big( f(x) \big) = \pm \infty$ ili $\lim_{x \to c^+} \big( f(x) \big) = \pm \infty$
 
 - **HA:** $y= l$ je desna HA funkcije $f$ ako je $l = \lim_{x \to \infty} \big( f(x) \big)$. Alternativno, ako je $l = \lim_{x \to -\infty} \big( f(x) \big)$, tada je $y = l$ lijeva HA funkcije $f$.
 
-- **KA:** $y = kx + l$ je desna KA funkcije $f$ ako $\lim_{x \to \infty} \big( f(x) -kx - l\big) = 0$. Ako $l =\lim_{x \to -\infty} \big( f(x) -kx\big) = 0$, onda je $y = kx +l$ lijeva KA funkcije.
+- **KA:** $y = kx + l$ je desna KA funkcije $f$ ako $\lim_{x \to \infty} \big( f(x) -kx - l\big) = 0$. Ako $l =\lim_{x \to -\infty} \big( f(x) -kx\big) = 0$, onda je $y = kx +l$ lijeva KA funkcije. ==! ovi mi nije jasno==
 
-
+==! IZVODI FORMULA (pravac kroz dvije točke, pravac s nagibom kroz točku, pravila deriviranja preko definicije,...)==
 ## Derivacija funkcije
 
 - **GEOMETRIJSKA INTERPRETACIJA DERIVACIJE:** Derivacija funkcije $f$ u točki $x_0$ predstavlja koeficijent smjera tangente na graf funkcije $f$ u toj točki $\big( x_0, f(x_0) \big)$.
 
 - **DEFINICIJA DERIVACIJE U TOČKI:** Derivacija funkcije $f$ u točki $x_0$ je $f'(x_0) = \lim_{\Delta x \to 0} \Big( \frac {f(x_0 + \Delta x)- f(x_0)} {\Delta x} \Big)$, pod uvjetom da dani limes postoji.
+$$f'(x_0) \; = \;  \lim_{\Delta x \to 0} \Big( \frac{\Delta f(x_0)}{\Delta x} \Big) \; = \; \lim_{\Delta x \to 0} \Big( \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} \Big)$$ ==! je li ovaj prvi (skraćeni) izraz točan?
 
-- **Derivabilna funkcija:** Funkcija $f$ je derivabilna/diferencijabilna na intervalu $\langle a, \, b \rangle$ ako ima derivaciju u svakoj točki tog intervala, a $f'$ definiana na tom intervalu je derivacija funkcije $f$.
+- **Derivabilna funkcija:** Funkcija $f$ je derivabilna/diferencijabilna na intervalu $\langle a, \, b \rangle$ ako ima derivaciju u svakoj točki tog intervala, a $f'$ definirana na tom intervalu je derivacija funkcije $f$.
 
-- **DEFINICIJA DERIVACIJE FINKCIJE:** Derivacija funkcije $f$ je funkcija $f'$ definirana kao $f'(x) = \lim_{\Delta x \to 0} \Big( \frac {f(x + \Delta x) - f(x)} {\Delta x}\Big)$, pod uvjetom da dani limes postoji.
+- **DEFINICIJA DERIVACIJE FINKCIJE:** Derivacija funkcije $f$ je funkcija $f'$ definirana kao $f'(x) = \lim_{\Delta x \to 0} \Big( \frac {f(x + \Delta x) - f(x)} {\Delta x}\Big)$, pod uvjetom da taj limes postoji.
 
-- **DERIVACIJA PRAVILA DERIVACIJE** - vjerojatno će biti barem jedno pitanje - probati svaku jednom
 
-- **Pravilo o derivaciji kompozicije/ulančanom deriviranju (chain rule):** $\Big(f\big(g(x)\big)\Big)' = f'\big(g(x)\big)g'(x)$
+### Pravila deriviranja
 
-- **Derivacija inverza:** $\big( f^{-1}\big)'(y) = \frac {1} {f'(x)}$
+$$
+\begin{gathered}
+	_\textsf{osnovnija pravila} \\
+	\Big(u(x)  \pm v(x) \Big)' (x) = u'(x) \pm v'(x) \\\\
+	\Big(uv\Big)'(x) = u'(x) v(x) + v'(x) u(x) \\\\
+	\Big(k \cdot u \Big)'(x) = k \cdot u'(x) \\\\
+	\Bigg( \frac{u(x)}{v(x)}\Bigg)'(x) = \frac{u'(x) v(x) - v'(x) u (x)}{v^2(x)}\\\\\\
+	 _\textsf{manje osnovna pravila} \\
+	 \Big( f \circ g \Big) (x) = f'\big(g(x)\Big) \cdot g'(x) \\\\
+	 \Big( f^{-1} \Big)(y) = \frac{1}{f'(x)} \\\\
+	 y^{(n)}(x) = \Big( y^{(n-1)}\Big)'(x)
+	
+\end{gathered}
+$$
 
-- **Derivacije višeg reda:** Derivacije višeg reda određuju se induktivno, tj. $y^{(n)} = \Big( y^{(n-1)} \Big)'$
 
-- **Diferencijal funkcije:** izraz $f'(x)\Delta x$, oznaka $df$ `dodati`
+
+
+- **Derivacije višeg reda:** Derivacije višeg reda određuju se induktivno (rekurzivno?), tj. $y^{(n)} = \Big( y^{(n-1)} \Big)'$
+
+#### Diferencijal funkcije: 
+- **Diferencijal funkcije**: izraz $f'(x)\Delta x$, oznaka $df$ `dodati`
+$$\Delta f \simeq f'(x) \Delta x$$
+
 
 - **L'Hospitalovo pravilo:** Ako limes funkcije $f = \frac g h$ poprimi oblik $\frac 0 0$ i $\frac \infty \infty$, on će biti istovjetan limesu $\frac {g'} {h'}$. 
 
 ## Primjena derivacija
 
-- **Tangenta:** pravac koji dodiruje krivulju ($f$) u samo jednoj točki ($x_0$), jednadžbe $y - y_0 = f'(x_0)(x-x_0)$
+$$
+\begin{gathered}
+	_\textsf{pravac pod nagibom kroz točku} \\
+	y = k (x - x_0) + y_0 \\\\
+	
+	_\textsf{veza nagiba tang./norm. i derivacije} \\
+	k_t = f'(x_0) \qquad k_n = -\frac{1}{f'(x_0)} \\\\
 
-- **Normala:** pravac koji siječe tangentu funkcije $f$ u točki $x_0$ pod pravim kutem, jednadžbe $y - y_0 = - \frac{1}{f'(x_0)}(x - x_0)$
+	_\textsf{kut između dva pravca} \\
+	\varphi = \bigg|\frac{k_1 - k_2}{1 + k_1 k_2 }\bigg|
+\end{gathered}
+$$
 
-- **Kut između krivulja:** kut pod kojim se sijeku tangente krivulja u točki sjecišta krivulja, formula: $\tan (\phi) = \Big|\frac {f'(x_0) - g'(x_0)} {1 + f'(x_0) g'(x_0)}\Big|$
+- **Tangenta:** pravac koji dodiruje krivulju (funkciju $f$) u samo jednoj točki ($x_0$), jednadžbe $y = f'(x_0)(x-x_0) + y_0$
 
-- **Monotonost funkcije (teoremi 8 i 9):** Ako je $f: \: \langle a, \, b \rangle \to \mathbb{R}$ diferencijabilna funkcija i:
+- **Normala:** pravac koji sječe tangentu funkcije $f$ u točki $x_0$ pod pravim kutem, jednadžbe $y = - \frac{1}{f'(x_0)}(x - x_0) + y_0$
+
+- **Kut između krivulja:** kut pod kojim se sijeku tangente krivulja u točki sjecišta krivulja, formula: $\tan (\varphi) = \Big|\frac {f'(x_0) - g'(x_0)} {1 + f'(x_0) g'(x_0)}\Big|$
+
+- **! Monotonost funkcije (teoremi 8 i 9):** Ako je $f: \: \langle a, \, b \rangle \to \mathbb{R}$ diferencijabilna funkcija i:
 	- $f'(x) < 0 \quad \forall x \in \langle a, \, b \rangle$, $f$ strogo raste na int. $\langle a, \, b \rangle$
 	- $f'(x) > 0 \quad \forall x \in \langle a, \, b \rangle$, $f$ strogo pada na int. $\langle a, \, b \rangle$
+$$
+\begin{gather}
+\textsf{Monotonost funkcije se može odrediti pomoću } \\ \textsf{prve derivacije na sljedeći način:} \\\\
 
-- **FERMATOV TEOREM (teorem 9):** Ako je funkcija $f: \: \langle a, \, b \rangle \to \mathbb{R}$ u točki $c$ diferencijabilna i u njoj ima lokalni ekstrem, tada je vrijednost $f'(c) = 0$.
+f'(x) < 0, \; \forall x \in \langle a, \, b \rangle \; \Rightarrow f \textsf{ strogo raste na } \langle a, \, b \rangle \\
+f'(x) > 0, \; \forall x \in \langle a, \, b \rangle \; \Rightarrow f \textsf{ strogo pada na } \langle a, \, b \rangle \\\\
+
+\textsf{(pod pretpostavkom da je funkcija derivabilna na čitavom } \langle a, \, b \rangle \textsf{)}
+\end{gather}$$
+
+- **FERMATOV TEOREM (teorem 9):** Ako je funkcija $f: \: \langle a, \, b \rangle \to \mathbb{R}$ u točki $c$ diferencijabilna i u njoj ima lokalni ekstrem, tada je vrijednost $f'(c) = 0$. ==!(zar to ne vrijedi za stac. t. općenito?)==
 
 - **Definicija stacionarne točke:** Stacionarna točka funkcije $f$ je točka u kojoj derivacija funkcije $f$ ($f'$) poprima vrijednost 0. Stacionarne točke su točke infleksije i ekstremi.
+$$\textsf{Stacionarna točka je točka u kojoj derivacija f. poprima vrijednost 0.}$$
 
-- **Određivanje ekstrema preko prve derivacije:** Stacionarna točka $T$ derivabilne funkcije je lokalni ekstrem akko postoji okolina točke takva da se u toj okolini predznak prve derivacije ljevo od $T$ razlikuje od predznaka desno od točke $T$.
+- **Određivanje ekstrema preko prve derivacije:** Stacionarna točka $T$ derivabilne funkcije je lokalni ekstrem akko postoji okolina točke takva da se u toj okolini predznak prve derivacije ljevo od $T$ razlikuje od predznaka desno od točke $T$
+$$
+\begin{gather}
+	\textsf{Određivanje ekstrema preko prve derivacije} \\
+	\textsf{Ekstremi f. su nultočke prve derivacije} \\
+	f'(c) = 0 \\\\
+	
+	\textsf{Određivanje prirode ekstrema preko prve derivacije} \\
+	f'(c) = 0
+	\begin{cases}
+		f'(c-\delta) < 0, \; f'(c+\delta) > 0 \;\Rightarrow \; \textsf{lokalni minimum} \\
+		f'(c-\delta) > 0, \; f'(c+\delta) < 0 \;\Rightarrow \; \textsf{lokalni maksimum} \\\\
+		f'(c-\delta) > 0, \; f'(c+\delta) > 0 \;\Rightarrow \; \textsf{infleksija konk.} \rightarrow \textsf{konv. (?)}\\
+		f'(c-\delta) < 0, \; f'(c+\delta) < 0 \;\Rightarrow \; \textsf{infleksija konv.} \rightarrow \textsf{konk. (?)}\\
+	\end{cases}
+\end{gather}
+$$
+
+==! kako iz grafa vidjeti koja funkcija je original, a koja derivacija (ili original - integral, dođe na isto)
 
 - **Određivanje ekstrema preko druge derivacije:**
 	- Ako je $f'(c) = 0$ i $f''(c) > 0$, funkcija $f$ u točki $c$ ima lokalni minimum
 	- Ako je $f'(c) = 0$ i $f''(c) < 0, funkcija $f$ u točki $c$ ima lokalni maksimum
 	- Kao je $f'(c) = 0$ i $f''(c) = 0$, tada ne možemo odrediti ekstrem putem druge derivacije
 
-- **Definicija konveksnosti:** Neprekidna funkcija $f: \: I \to \mathbb{R}$ je konveksna na intervalu $I \subseteq \mathbb{R}$ ako za svaki $a, \, b \in I$ vrijedi $f(\frac {a+b} {2}) \leq \frac {f(a) + f(b)} {2}$. Ako je u pitanju stroga nejednakost, tada je i funkcija strogo konveksna (oblik U)
+$$
+\begin{gather}
+	\textsf{Određivanje ekstrema preko druge derivacije} \\
+	f(c) = 0
+	\begin{cases}
+		f'(c) = 0, \; f''(c) > 0 \; \Rightarrow \; \textsf{lokalni minimum} \\
+		f'(c) = 0, \; f''(c) < 0 \; \Rightarrow \; \textsf{lokalni maksimum} \\
+		f'(c) = 0, \; f''(c) = 0 \; \Rightarrow \; \textsf{N.R. (barem ne ovim postupkom)}
+	\end{cases}
+\end{gather}
+$$
+
+#### Konveksnost i konkavnost
+
+- **Definicija konveksnosti:** Neprekidna funkcija $f: \: I \to \mathbb{R}$ je konveksna na intervalu $I \subseteq \mathbb{R}$ ako za svaki $a, \, b \in I$ vrijedi $f(\frac {a+b} {2}) \leq \frac {f(a) + f(b)} {2}$. Ako je u pitanju stroga nejednakost, tada je i funkcija strogo konveksna (oblik U) ==! u prezama nije definirano je li $I$ otvoren ili zatvoren==
+$$
+\begin{gather}
+f \textsf{ je konveksna na } \langle a, \, b \rangle \textsf { ako } f (\frac{a + b}{2}) \leq \frac{f(a) + f(b)}{2} \\\\
+\textsf{Ako je znak obrnut, } f \textsf{ je konkavna.} \\
+\textsf{I ovdje možemo razmišljati o strogosti.}
+
+
+\end{gather}
+$$
 
 - **Definicija konavnosti:** Neprekidna funkcija $f: \: I \to \mathbb{R}$ je konkavna na intervalu $I \subseteq \mathbb{R}$ ako za svaki $a, \, b \in I$ vrijedi $f(\frac {a+b} {2}) \geq \frac {f(a)+f(b)} {2}$. Ako je u pitanju stroga nejednakost, funkcija je strogo konkavna (oblik naopako U)
 
@@ -544,9 +724,3 @@ $$\forall a_n, \,\lim_{n \to \infty} (a_n) = c \Rightarrow  $$
 - **Definicija određenog integrala:** Zajednički limes gornje i donje integralne sume funkcije $f: \: [a, \, b] \to \mathbb{R}$ je određen integral funkcije $f$, a označava se s $I = \int_a^b f(x) dx$ i on je jednak površini ispod grafa funkcije $f$ na intervalu $[a, \, b]$.
 
 - **Newton-Leibnizova formula:** daje vezu određenog integrala i primitivne funkcije podintegralne funkcije. Formula: $\int_a^b f(x) dx = F(b) -F(a) = F(x)\Big|_a^b$  
-
-
-
-
-
-
